@@ -4,6 +4,7 @@
   "description": "This is a website for Ristorante Con Fusion",
   "main": "index.html",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "start": "npm run watch:all",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server",
@@ -16,9 +17,13 @@
     "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactushtml && usemin aboutus.html -d dist --html -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
     "build": "npm run clean && npm run copyfonts && npm run imagemin && npm run usemin"
   },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.26.13",
     "cssmin": "^0.4.3",
     "grunt": "^1.0.2",
     "grunt-browser-sync": "^2.2.0",
@@ -33,6 +38,8 @@
     "grunt-filerev": "^2.3.1",
     "grunt-sass": "^2.1.0",
     "grunt-usemin": "^3.1.1",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.1.0",
     "htmlmin": "0.0.7",
     "jit-grunt": "^0.10.0",
     "lite-server": "^2.5.4",
